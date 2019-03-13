@@ -1,26 +1,36 @@
 *{
   box-sizing: border-box;
+  overflow: hidden;
+   
+}
+
+html{
+  background-color: rgba(0, 0, 0, 0)
 }
 
 body{
-  background-color: rgba(0, 0, 0, 0.822);
+  background-image: url("https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   position: relative;
-  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover
 }
 
 .App {
   text-align: center;
-  background-color: rgba(9, 123, 230, 0.61);
+  background-color: rgba(149, 173, 196, 0);
   height:100vh;
-  overflow:auto;
+  overflow:auto ;
   color:white;
-  width:70%;
+  width:100%;
   margin:auto;
+  padding:10px
 }
 
 .title{
   border-bottom:3px solid rgba(61, 61, 61, 0.582);
-  font-family: 'Allan';font-size: 3.5rem;
+  font-family: 'Allan';font-size: 2.5rem;
+  font-weight:100; 
   margin-bottom:30px;
   padding:5px;
 }
@@ -31,32 +41,37 @@ h1{
 }
 
 .app-container{
-  width:70%;
+  width:90%;
   margin:auto;
   border-radius:10px;
   border:0px;
   padding:0;
 }
 
-#imageContainer{
-  width:100%;
+.imageContainer{
+  width:80%;
   margin:auto;
 }
 
-#imageContainer img{
+.imageContainer img{
   width:100%;
-  border-radius:5px;
-  box-shadow: 8px 8px 32px 4px rgb(24, 24, 24)
+  max-width:300px;
+
+}
+
+.string{
+  font-weight:100;
 }
 
 .submit-button{
-  background-color:rgb(92, 199, 92);
+  background-color:rgb(92, 199, 92, 0.555);
   color:white;
   font-size:1.8em;
   font-weight: bold;
   margin-top:50px;
   height:100px;
   width: 80%;
+  max-width:400px;
   border:none;
   border-radius:10px;
   font-family: 'Allan';font-size: 3rem;
@@ -68,10 +83,11 @@ h1{
 }
 
 input{
-  background-color: rgba(56, 56, 56, 0.288);
+  background-color: rgba(56, 56, 56, 0.555);
   color:rgb(255, 255, 255);
-  height:100px;
-  width:100%;
+  height:80px;
+  width:80%;
+  max-width:400px;
   font-size: 3em;
   padding:10px;
   border:none;
@@ -81,28 +97,77 @@ input{
 
 
 .weather-container{
-  margin:0;
-  padding:0;
-  font-size: 1.8em;
-  width:80%;
-  margin:auto;
+  padding:10px;
+  font-size: 1em;
   border-radius:25px;
-  max-width:600px;
+  width:100%;
+  display:flex;
+  justify-content: space-evenly;
+
 }
 .weather-child{
 color:rgba(255, 255, 255, 0.856);
 width:50%;
 margin:auto;
-border-radius:10px;
-font-family: 'Allan';font-size: 3rem;
+font-family: 'Allan';font-size: 1.3rem;
+
 }
+.weather-child.temp{
+  color:rgba(255, 255, 255, 0.856);
+  width:50%;
+  margin:auto;
+  font-family: 'Allan';font-size: 1.3rem;
+  
+  }
+
+.cards{
+  border-radius:10px;
+  padding:10px;
+  background-color: rgba(128, 128, 128, 0.452);
+  width:400px;
+  margin-top:10px;
+  margin-left:10px
+}
+
+
+/* .weather-container .day-1-container{
+ border:1px solid white;
+ border-radius:10px;
+ padding:10px;
+ 
+}
+.weather-container .day-2-container{
+  border:1px solid white;
+  border-radius:10px;
+  padding:10px;
+  
+ }
+ .weather-container .day-3-container{
+  border:1px solid white;
+  border-radius:10px;
+  padding:10px;
+  
+ }
+ .weather-container .day-4-container{
+  border:1px solid white;
+  border-radius:10px;
+  padding:10px;
+  
+ }
+ .weather-container .day-5-container{
+  border:1px solid white;
+  border-radius:10px;
+  padding:10px;
+  
+ } */
+
 
 .temp{
   font-size: .8em;
   color:rgba(255, 255, 255, 0.856);
   width:80%;
   margin:auto;
-  font-family: 'Allan';font-size: 3rem;
+  font-family: 'Allan';font-size: 1rem;
 }
 
 .App-logo {
@@ -136,26 +201,30 @@ font-family: 'Allan';font-size: 3rem;
 
 
 /* Mobile friendly Media Query */
-@media(max-width:720px){
+@media(max-width:820px){
   body{
-    background-color: rgba(9, 123, 230);
-    position: relative;
+
   }
+
+
   
   .App {
     text-align: center;
-    background-color: rgba(9, 123, 230);
-    height: calc(100vh - 150px);
+    background-color: rgba(9, 123, 230, 0);
+    height: 100vh;
     overflow:auto;
     color:white;
     margin-top:50px;
     width:100%;
+    margin-top: 0px;
   }
 
   .title{
     border-bottom:3px solid rgba(61, 61, 61, 0.582);
-    font-family: 'Allan';font-size: 3.5rem;
-    margin-bottom:30px;
+    font-family: 'Allan';
+    font-size: 2.8rem;
+    margin-top:50px;
+    margin-bottom:20px;
     padding:5px;
   }
   
@@ -171,18 +240,10 @@ font-family: 'Allan';font-size: 3rem;
     padding:0;
   }
 
-  #imageContainer{
-    width:100%;
-    margin:auto;
-  }
-  
-  #imageContainer img{
-    width:100%;
-    border-radius:5px;
-  }
+
   
   .submit-button{
-    background-color:rgb(92, 199, 92);
+    background-color:rgb(92, 199, 92, 0.555);
     color:white;
     font-size:1.8em;
     font-weight: bold;
@@ -190,16 +251,15 @@ font-family: 'Allan';font-size: 3rem;
     height:100px;
     width: 100%;
     border:none;
-    border-radius:0px;
+    border-radius:10px;
     font-family: 'Allan';font-size: 3rem;
-    position: fixed;
-    bottom:0;
-    left:0;
-    z-index: 0;
+
+   
   }
   ::placeholder{
     color:rgb(255, 255, 255);
-    font-family: 'Allan';font-size: 1.8rem;
+    font-family: 'Allan';
+    font-size: 1.8rem;
   }
   
   input{
@@ -215,30 +275,69 @@ font-family: 'Allan';font-size: 3rem;
   }
   
   
-  .weather-container{
-    margin:0;
-    padding:0;
-    font-size: 1.8em;
-    width:80%;
-    margin:auto;
-    border-radius:25px;
-    max-width:600px;
-  }
-  .weather-child{
-  color:rgba(255, 255, 255, 0.856);
-  width:50%;
+.weather-container{
+  margin:0;
+  padding:0;
+  font-size: 1em;
+  width:100%;
   margin:auto;
-  border-radius:10px;
-  font-family: 'Allan';font-size: 3rem;
-  }
+  border-radius:25px;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: space-evenly;
+
+}
+.weather-child{
+color:rgba(255, 255, 255, 0.856);
+width:50%;
+margin:auto;
+font-family: 'Allan';font-size: 1.5rem;
+}
+
+.cards{
+  margin:0;
+  margin-top:10px;
+  width:100%
+}
+
+#imageContainer{
+  width:80%;
+  margin:auto;
+}
+
+#imageContainer img{
+  width:200px;
+}
+
+/* 
+
+.day-1-container{
+  color:red;
+ border:1px solid white;
   
-  .temp{
-    font-size: .8em;
-    color:rgba(255, 255, 255, 0.856);
-    width:80%;
-    margin:auto;
-    font-family: 'Allan';font-size: 3rem;
-  }
+}
+.day-2-container{
+  
+}
+.day-3-container{
+
+}
+.day-4-container{
+
+}
+.day-5-container{
+
+}
+     */
+    .temp{
+      font-size: .8em;
+      color:rgba(255, 255, 255, 0.856);
+      width:80%;
+      margin:auto;
+      font-family: 'Allan';font-size: 1.5rem;
+    }
   
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
